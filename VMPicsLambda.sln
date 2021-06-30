@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GalleryJsonLambdaFunction",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GalleryJsonLambdaFunction.Tests", "GalleryJsonLambdaFunction.Tests\GalleryJsonLambdaFunction.Tests.csproj", "{6266C494-1440-417E-8F44-D1013C39D96F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWSSecretManager", "AWSSecretManager\AWSSecretManager.csproj", "{C7DD0D26-9EBD-4416-85D8-8DF748598260}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWSSecretManagerTests", "AWSSecretManagerTests\AWSSecretManagerTests.csproj", "{B7BCF4A0-8D6B-48B3-B88F-0B90AF7D950D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{6266C494-1440-417E-8F44-D1013C39D96F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6266C494-1440-417E-8F44-D1013C39D96F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6266C494-1440-417E-8F44-D1013C39D96F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7DD0D26-9EBD-4416-85D8-8DF748598260}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7DD0D26-9EBD-4416-85D8-8DF748598260}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7DD0D26-9EBD-4416-85D8-8DF748598260}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7DD0D26-9EBD-4416-85D8-8DF748598260}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7BCF4A0-8D6B-48B3-B88F-0B90AF7D950D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7BCF4A0-8D6B-48B3-B88F-0B90AF7D950D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7BCF4A0-8D6B-48B3-B88F-0B90AF7D950D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7BCF4A0-8D6B-48B3-B88F-0B90AF7D950D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

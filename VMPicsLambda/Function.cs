@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Amazon.Lambda.Core;
 using Amazon.S3;
+using AWSSecretManager;
 using VMPicsLambda.Models;
 
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
@@ -24,8 +25,7 @@ namespace VMPicsLambda
 		/// <returns></returns>
 		public IEnumerable<PortfolioImage> FunctionHandler(PortfolioRequest portfolioRequest, ILambdaContext context)
 		{
-			var accessKeyId = "AKIAYJ5XCCID5GBP2F44";
-			var secretAccessKey = "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";
+			var (accessKeyId, secretAccessKey) = SecretManager.GetSecret();
 
 			var awsS3Client = new AmazonS3Client(accessKeyId, secretAccessKey, Amazon.RegionEndpoint.APSoutheast2);
 			var images = awsS3Client.ListObjectsAsync(portfolioRequest.BucketName, $"{portfolioRequest.AlbumName}").Result;

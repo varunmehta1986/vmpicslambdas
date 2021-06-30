@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
     <AWSProjectType>Lambda</AWSProjectType>
 
@@ -12,5 +12,8 @@
     <PackageReference Include="Amazon.Lambda.Serialization.SystemTextJson" Version="2.1.0" />
     <PackageReference Include="AWSSDK.S3" Version="3.7.0.14" />
     <PackageReference Include="AWSSDK.SimpleNotificationService" Version="3.7.0.14" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AWSSecretManager\AWSSecretManager.csproj" />
   </ItemGroup>
 </Project>

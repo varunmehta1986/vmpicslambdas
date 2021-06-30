@@ -8,6 +8,7 @@ using Amazon.SimpleNotificationService.Model;
 using BookingNotificationFunction.Models;
 using System.Text.Json;
 using System.Net;
+using AWSSecretManager;
 
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
 [assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.SystemTextJson.DefaultLambdaJsonSerializer))]
@@ -25,11 +26,9 @@ namespace BookingNotificationFunction
         /// <returns></returns>
         public HttpStatusCode FunctionHandler(BookingRequest bookingRequest, ILambdaContext context)
         {
-            //var accessKeyId = "AKIAYJ5XCCID5GBP2F44";
-            //var secretAccessKey = "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";
-
-            var awsSNSClient = new AmazonSimpleNotificationServiceClient("AKIAYJ5XCCID5GBP2F44",
-                                    "SBYrHzz5FWYKBEU4FO1jz8DWQ4aF3PJt5WKEVgIC", Amazon.RegionEndpoint.APSoutheast2);
+            var (accessKeyId, secretAccessKey) = SecretManager.GetSecret();
+            var awsSNSClient = new AmazonSimpleNotificationServiceClient(accessKeyId,
+                                    secretAccessKey, Amazon.RegionEndpoint.APSoutheast2);
             var publishRequest = new PublishRequest()
             {
                 TopicArn = "arn:aws:sns:ap-southeast-2:571077693959:BookingNotifications",
