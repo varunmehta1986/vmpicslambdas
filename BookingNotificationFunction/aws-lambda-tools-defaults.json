@@ -13,12 +13,12 @@
     "function-runtime" : "dotnetcore3.1",
     "function-memory-size" : 128,
     "function-timeout"     : 15,
-    "function-handler"     : "BookingNotificationFunction::BookingNotificationFunction.Function::FunctionHandler",
+    "function-handler"     : "BookingNotificationFunction::BookingNotificationFunction.Function::SendBookingNotification",
     "function-name"        : "BookingNotificationFunction",
     "function-description" : "",
     "package-type"         : "Zip",
     "function-role"        : "arn:aws:iam::571077693959:role/LambdaSNSFullAccess",
     "tracing-mode"         : "PassThrough",
-    "environment-variables" : "",
+    "environment-variables" : "\"aws_access_key_id\"=\"AKIAYJ5XCCIDV6D4X727\";\"aws_secret_access_key\"=\"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\"",
     "image-tag"             : ""
 }

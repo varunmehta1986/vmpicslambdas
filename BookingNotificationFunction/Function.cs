@@ -18,13 +18,7 @@ namespace BookingNotificationFunction
     public class Function
     {
 
-        /// <summary>
-        /// A simple function that takes a string and does a ToUpper
-        /// </summary>
-        /// <param name="input"></param>
-        /// <param name="context"></param>
-        /// <returns></returns>
-        public HttpStatusCode FunctionHandler(BookingRequest bookingRequest, ILambdaContext context)
+        public HttpStatusCode SendBookingNotification(BookingRequest bookingRequest)
         {
             var (accessKeyId, secretAccessKey) = SecretManager.GetSecret();
             var awsSNSClient = new AmazonSimpleNotificationServiceClient(accessKeyId,
